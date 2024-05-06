@@ -21,3 +21,8 @@ jobs:
     
     - name: Build with Maven
       run: mvn clean verify
+
+    - name: Run Static Application Security Testing (SAST)
+      uses: secureCodeBox/static-analysis-scan@v3
+      with:
+        findings-output-path: 'sast-findings.json'
